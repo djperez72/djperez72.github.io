@@ -4,7 +4,57 @@
 </head>
 
 <body>
-<iframe src="https://player.vimeo.com/video/377373826" width="100%" height="900"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  <script>
+        function setIframeSource() {
+            // behavior of myIframe
+            var theSelect = document.getElementById('location');
+            var theIframe = document.getElementById('myIframe');
+            var theUrl;
+            theUrl = theSelect.options[theSelect.selectedIndex].value;
+            theIframe.src = theUrl;
+
+            
+        }
+    </script>
+<form id="form1" method="post" style="text-align: center;">
+    <label style="text-align: center;">Select an Issue</label>
+    <select id="location" onchange="setIframeSource()">
+    <option value="https://track.govhawk.com/reports/qBE3Z/public">All Pending Legislation
+    </option>
+    <option value="https://track.govhawk.com/reports/qQydb/public">Affidavit/Certificate of Merit Requirements
+    </option>
+    <option value="https://track.govhawk.com/reports/Mwz8K/public">Collateral Source Rule Reform
+    </option>
+    <option value="https://track.govhawk.com/reports/2LDpK/public">COVID-19 Liability Protections
+    </option>
+    <option value="https://track.govhawk.com/reports/qnpzo/public">Data Privacy &amp; Security
+    </option>
+    <option value="https://track.govhawk.com/reports/MP9eG/public">Damage Caps
+    </option>
+    <option value="https://track.govhawk.com/reports/21pOB/public">Early Communication &amp; Resolution
+    </option>
+    <option value="https://track.govhawk.com/reports/Ma9Dl/public">Limitations on Attorney Fees
+    </option>
+    <option value="https://track.govhawk.com/reports/2NmOB/public">Periodic Payment of Future Damages
+    </option>
+    <option value="https://track.govhawk.com/reports/2eY4b/public">Phantom Damages
+    </option>
+    <option value="https://track.govhawk.com/reports/2lWz6/public">Statute of Limitations
+    </option>
+    <option value="https://track.govhawk.com/reports/qorJe/public">Other Legislation
+    </option>
+    <option value="https://track.govhawk.com/reports/2zVv9/public">2021 Legislative Enactments
+    </option>
+    </select>
+</form>
+<br />
+<br />
+<iframe id="myIframe" style="overflow: hidden;" src="https://track.govhawk.com/reports/qBE3Z/public" marginwidth="0" marginheight="0" width="100%" height="1000" frameborder="0"></iframe>
+<br />
+<br />
+<hr />
+  
+  
 </body>
 
 </html>
